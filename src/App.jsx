@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Header/Header";
 import CartItems from "./CartItems/CartItems";
@@ -59,17 +59,14 @@ function App() {
       name: "Dosa",
       price: 60,
       image: "https://picsum.photos/seed/dosa/300/200",
-    },
-    {
-      id: 10,
-      name: "Chicken Wings",
-      price: 260,
-      image: "https://picsum.photos/seed/chicken/300/200",
-    },
+    }
   ]);
-  const [newCart, setNewCart] = useState([]);
+  const [newCart, setNewCart] = useState(JSON.parse(localStorage.getItem("List-Items")) || []);
   const [toggle, setToggle] = useState(false);
-  
+
+  useEffect(() => {
+    localStorage.setItem("List-Items", JSON.stringify(newCart));
+  }, [newCart]);
 
   return (
     <>
