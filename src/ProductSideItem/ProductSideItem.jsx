@@ -25,7 +25,7 @@ const ProductSideItem = ({ newCart, toggle, setToggle, setNewCart }) => {
       </div>
 
       {newCart.length ? (
-        <ul>
+        <ul className="item-carts">
           {newCart.map((newCarts) => (
             <li key={newCarts.id} className="products-added-cart">
               <div className="image-sections">

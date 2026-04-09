@@ -10,58 +10,60 @@ function App() {
       id: 1,
       name: "Burger",
       price: 120,
-      image: "https://picsum.photos/seed/burger/300/200",
+      image: "https://foodish-api.com/images/burger/burger4.jpg",
     },
     {
       id: 2,
       name: "Pizza",
       price: 250,
-      image: "https://picsum.photos/seed/pizza/300/200",
+      image: "https://foodish-api.com/images/pizza/pizza1.jpg",
     },
     {
       id: 3,
       name: "Pasta",
       price: 180,
-      image: "https://picsum.photos/seed/pasta/300/200",
+      image: "https://foodish-api.com/images/pasta/pasta1.jpg",
     },
     {
       id: 4,
       name: "Fried Rice",
       price: 140,
-      image: "https://picsum.photos/seed/friedrice/300/200",
+      image: "https://foodish-api.com/images/rice/rice9.jpg",
     },
     {
       id: 5,
       name: "Biryani",
       price: 220,
-      image: "https://picsum.photos/seed/biryani/300/200",
+      image: "https://foodish-api.com/images/biryani/biryani1.jpg",
     },
     {
       id: 6,
-      name: "Sandwich",
+      name: "Samosa",
       price: 90,
-      image: "https://picsum.photos/seed/sandwich/300/200",
+      image: "https://foodish-api.com/images/samosa/samosa1.jpg",
     },
     {
       id: 7,
       name: "Noodles",
       price: 130,
-      image: "https://picsum.photos/seed/noodles/300/200",
+      image: "https://foodish-api.com/images/pasta/pasta2.jpg",
     },
     {
       id: 8,
-      name: "Ice Cream",
+      name: "Butter Chicken",
       price: 80,
-      image: "https://picsum.photos/seed/icecream/300/200",
+      image: "https://foodish-api.com/images/butter-chicken/butter-chicken14.jpg",
     },
     {
       id: 9,
       name: "Dosa",
       price: 60,
-      image: "https://picsum.photos/seed/dosa/300/200",
+      image: "https://foodish-api.com/images/dosa/dosa1.jpg",
     }
   ]);
-  const [newCart, setNewCart] = useState(JSON.parse(localStorage.getItem("List-Items")) || []);
+  const [newCart, setNewCart] = useState(
+    JSON.parse(localStorage.getItem("List-Items")) || [],
+  );
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
@@ -70,20 +72,16 @@ function App() {
 
   return (
     <>
-      <Header 
+      <Header
         title="Shopping Cart"
         cartLength={newCart.length}
         toggle={toggle}
         setToggle={setToggle}
       />
-      
-      <CartItems 
-        cart={cart}
-        newCart={newCart}
-        setNewCart={setNewCart}
-      />
 
-      <ProductSideItem 
+      <CartItems cart={cart} newCart={newCart} setNewCart={setNewCart} />
+
+      <ProductSideItem
         toggle={toggle}
         setToggle={setToggle}
         newCart={newCart}
