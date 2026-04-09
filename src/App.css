@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family:
+    "Poppins", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #161515;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 1.2rem 1.1rem;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-add {
+  background-color: #f00;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carts-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.food-cart-section {
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #333;
+}
+
+.cart-image-section,
+.image-sections {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cart-food-name {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.product-side-items {
+  width: 100%;
+  max-width: 550px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  transform: translateX(0);
+  transition:
+    transform 0.5s linear,
+    width 0.5s linear;
+  /* display: block; */
+}
+
+.product-side-items-appear {
+  display: none;
+  transform: translateX(100%);
+}
+
+.product-side-items .header-section {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  align-items: center;
+  color: #fff;
+  padding: 1.07rem 1.2rem;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.product-side-items .header-section h2:nth-child(2):hover {
+  color: #f00;
+}
+
+.close-btn {
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.products-added-cart {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+}
+
+.image-sections img {
+  max-width: 100%;
+  height: auto;
+}
+
+.total-cart {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  background-color: #000;
+  border-top: 1px solid #fff;
+}
+
+.delete {
+  color: #f00;
+  font-size: 1.5rem;
+}
+
+.delete:hover {
+  background-color: inset #f00;
+}
+
+.image-sections,
+.carts-name,
+.carts-price,
+.delete-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.add-cart-btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #0ff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul {
+  max-height: 100%;
+}
